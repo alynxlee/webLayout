@@ -1,0 +1,434 @@
+@charset "utf-8";
+
+/* 공통 적용 */
+html {
+  font-family: 'Pretendard', -apple-system,BlinkMacSystemFont,helvetica,"Apple SD Gothic Neo",sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(68, 84, 84);
+  border-radius: 3px;
+}
+
+/*********** header ***********/
+.container header {
+  height: 100vh;
+  background: url(./images/img01.jpg) no-repeat 50% / cover;
+}
+.container header .header_wrapper {
+  position: relative;
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+
+  
+}
+.container header .header_wrapper #logo {
+  font-family: 'Rubik Bubbles', cursive;
+  font-size: 1.8em;
+  padding-left: 20px;
+  width: 100px;
+}
+.container header .gnb_wrapper {
+
+  display: flex;
+} 
+.container header #gnb {
+  font-size: 1.1em;
+  font-weight: 700;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  position: absolute;
+  top: 0; right: 200px;
+
+}
+.container header #gnb li a {
+  display: block;
+  /* width: 100px; */
+  height: 54px;
+  line-height: 54px;
+  padding: 0 20px;
+  text-align: center;
+}
+.container header #login {
+  font-size: 0.9em;
+  width: 100px; 
+  display: flex;
+  
+  position: absolute;
+  top: 0; right: 50px;
+
+}
+.container header #login li a {
+  display: block;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 10px;
+}
+.container header #gnb li .drop {
+  display: none;
+  padding: 0;
+  font-size: 1em;
+  background: rgba(0, 0, 0, 0.387);
+  color: #fff;
+}
+.container header #gnb a:hover {
+  background-color: rgba(247, 247, 247, 0.671);
+}
+.container header #gnb li:hover .drop {
+  display: block;
+}
+.container header #gnb li .drop a:hover  {
+  background: #000;
+} 
+
+
+/*********** main ***********/
+main .top_btn {
+  width: 40px; height: 40px;
+  line-height: 40px;
+  background: rgb(42, 42, 42);
+  color: #fff;
+  text-align: center;
+
+  position: fixed;
+  bottom: 20px; right: 20px;
+
+  z-index: 9999;
+
+  
+}
+main .top_btn span {
+  font-size: 2.5em;
+}
+
+
+main .box1 {
+  padding: 100px 70px;
+}
+main .box1 .about {
+  height: 600px;
+  display: grid;
+  grid-auto-rows: 500px;
+  grid-template: repeat(2, 50%) / 1fr 1fr;
+  
+}
+
+main .box1 .about li {
+  padding: 50px;
+}
+main .box1 .about li:first-child {
+  border-bottom: #000 solid 1px;
+  border-right: #000 solid 1px;
+}
+main .box1 .about li:nth-child(2) {
+  border-bottom: #000 solid 1px;
+}
+main .box1 .about li:nth-child(3) {
+  border-right: #000 solid 1px;
+}
+main .box1 ul h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 30px 0;
+}
+
+main .box2 {
+  height: 1000px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  
+}
+main .box2 .img1 {
+  background: url(./images/img02.jpg) no-repeat 50% / cover;
+  grid-row: 1/3;
+  grid-column: 1/3;
+  position: relative;
+}
+main .box2 .img2 {
+  background: url(./images/img03.jpg) no-repeat 50% / cover;
+  grid-row: 1/1;
+  grid-column: 3/4;
+}
+main .box2 .img3 {
+  background: url(./images/img04.jpg) no-repeat 50% / cover;
+}
+main .box2 .img4 {
+  background: url(./images/img05.jpg) no-repeat 50% / cover;
+  grid-column: 3/5;
+}
+main .box2 .img5 {
+  background: url(./images/img06.jpg) no-repeat 50% / cover;
+  grid-column: 1/3;
+}
+main .box2 .img6 {
+  background: url(./images/img07.jpg) no-repeat 50% / cover;
+}
+main .box2 .img7 {
+  background: url(./images/img08.jpg) no-repeat 50% / cover;
+}
+
+main .box2 .bdf {
+  position: relative;
+  cursor: pointer;
+}
+main .box2 .bdf .bf_txt {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: lightsteelblue;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  text-indent: -9999px;
+}
+main .box2 .bdf:hover::after {
+  content: "";
+  width: 100%; height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  background: rgba(0, 0, 0, 0.292);
+  backdrop-filter: blur(5px);
+}
+main .box2 .bdf:hover .bf_txt {
+  text-indent: 0;
+  z-index: 9998;
+  
+}
+
+
+
+main .box3 {
+  height: 150vw;
+  margin: 100px 70px;
+  text-align: center;
+}
+main .box3 h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+main .box3 .boarder {
+  width: 30px;
+  border-bottom: 1px solid #000;
+  margin: 30px auto;
+}
+main .box3 .txt1 {
+  margin: 0 auto;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+main .box3 .business {
+  height: 90%;
+
+  display: grid;
+  gap: 30px;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+main .box3 .business li .box3_img {
+  height: 50vw;
+  text-indent: -9999px;
+}
+main .box3 .business li .img8 {
+  background: url(./images/img09.jpg) no-repeat 50% / cover;
+}
+main .box3 .business li .img9 {
+  background: url(./images/img10.jpg) no-repeat 50% / cover;
+}
+main .box3 .business li .img10 {
+  background: url(./images/img11.jpg) no-repeat 50% / cover;
+}
+main .box3 .business li .img11 {
+  background: url(./images/img12.jpg) no-repeat 50% / cover;
+}
+main .box3 .business li h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+
+main .box4 {
+  height: 800px;
+  padding: 80px 70px;
+  background: #ddd;
+
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  align-content: center;
+  align-items: center;
+}
+main .box4 h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+main .box4 p {
+  padding: 20px 0;
+}
+main .box4 video {
+  overflow: hidden;
+  object-fit: cover;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  width:100%; height: 400px;
+}
+
+main .box5 {
+  height: 45vw;
+  margin: 100px 70px;
+  
+}
+main .box5 h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+main .box5 .boarder {
+  width: 30px;
+  border-bottom: 1px solid #000;
+  margin: 30px auto 50px;
+}
+main .box5 .box5_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main .box5 .box5_wrapper .service {
+  width: 20%;
+  box-shadow:
+  0px 1.7px 2.2px rgba(0, 0, 0, 0.02),
+  0px 4.1px 5.3px rgba(0, 0, 0, 0.028),
+  0px 7.6px 10px rgba(0, 0, 0, 0.035),
+  0px 13.6px 17.9px rgba(0, 0, 0, 0.042),
+  0px 25.5px 33.4px rgba(0, 0, 0, 0.05),
+  0px 61px 80px rgba(0, 0, 0, 0.07)
+;
+  transition: 0.5s cubic-bezier(.49,.06,.08,1);
+  cursor: pointer;
+}
+main .box5 .box5_wrapper .service h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 20px 20px;
+}
+main .box5 .box5_wrapper .service p {
+  padding: 0 20px 20px;
+}
+main .box5 .box5_wrapper .title1 .img12 {
+  height: 20vw;
+  background: url(./images/img13.jpg) no-repeat 50% / cover;
+}
+main .box5 .box5_wrapper .title2 .img13 {
+  height: 20vw;
+  background: url(./images/img14.jpg) no-repeat 50% / cover;
+}
+main .box5 .box5_wrapper .title3 .img14 {
+  height: 20vw;
+  background: url(./images/img15.jpg) no-repeat 50% / cover;
+}
+main .box5 .box5_wrapper .title4 .img15 {
+  height: 20vw;
+  background: url(./images/img16.jpg) no-repeat 50% / cover;
+}
+main .box5 .box5_wrapper .service:hover  {
+  transform: scale(1.1);
+}
+
+main .box6 {
+  padding: 100px;
+}
+main .box6 h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main .box6 .location {
+  background: rgb(55, 55, 55);
+  width: 260px;
+  padding: 20px;
+  color: #fff;
+}
+main .box6 #contact {
+  margin: 500px auto 30px;
+}
+main .box6 #contact li {
+  border-bottom: 1px #000 solid;
+  padding: 20px;
+  display: flex;
+}
+main .box6 #contact h4 {
+  font-weight: bold;
+  width: 150px;
+}
+main .box6 #contact li:last-child {
+  border-bottom: #000 3px solid;
+}
+
+
+/*********** footer ***********/
+footer .contactBox {
+  height: 450px;
+  background: url(./images/img16.jpg) fixed no-repeat 50% / cover;
+  position: relative;
+  
+}
+footer .contactBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width:100%; height: 100%;
+  background: rgba(86, 86, 86, 0.481);
+}
+footer .contactBox h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
+
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+}
+footer .contactBox p {
+  width: 100%;
+  font-size: 1.3em;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5em;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+}
+footer .contactBox .contact_box {
+  width: inherit;
+  font-size: 1em;
+  top: 60%;
+  border: #fff 1px solid;
+  padding: 10px 15px;
+}
+
+footer .copyright {
+  height: 180px;
+  text-align: center;
+}
+footer .copyright p:first-child {
+  padding: 50px 0 30px;
+  
+}
